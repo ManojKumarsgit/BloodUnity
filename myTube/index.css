@@ -1,0 +1,343 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-style: Arial;
+}
+/* .logo{
+     width: 200px; 
+} */
+.sign-btn{
+    font-weight: bold;
+    padding: .5rem 1.5rem;
+    border-radius: 20px;
+    color: white;
+    background: transparent;
+    border: 1px solid yellow;
+    transition: all 0.3s;
+}
+.sign-btn:hover{
+    background-color: yellow;
+    color: black;
+}
+
+#navbarNav{
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
+#navbarNav li a{
+    transition: all 0.3s;
+}
+#navbarNav li a:hover{
+    color: yellow;
+}
+.background-con{
+  height: 100vh;
+  background-image: url("./images/topbg.jpg");
+}
+.background-con,
+.bg-contain2,
+.bg-contain4,
+.bg-contain5,
+.bg-contain6,
+.bg-contain7,
+.mv-back{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.backimg{
+    color: white;
+}
+.small-font{
+    font-size: 10px;
+    font-weight: lighter;
+}
+.box-1{
+    border: 1px solid white;
+    padding: 2px 4px;
+    background-color: white;
+    color: black;
+    margin-right: 6px;
+}
+.box-2{
+    border: 1px solid white;
+    padding: 2px 4px;
+}
+.watch-btn{
+    font-weight: bold;
+    padding: .7rem 1rem;
+    border: 1px solid yellow;
+    background-color: transparent;
+    color: white ;
+    border-radius: 2rem;
+    font-size: 12px;
+    transition: all 0.3s;
+}
+.watch-btn:hover{
+    background-color: yellow;
+    color: black;
+}
+.bg-contain2{
+
+    background-image: url("./images/upcoming-bg.png");
+}
+.btn-body{
+    font-size: 10px;
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    background-color:rgb(39, 42, 48);
+    color: white;
+    border: none;
+}
+.title-name{
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s;
+}
+.title-name:hover{
+    color: yellow;
+}
+
+.scroll-container::-webkit-scrollbar {
+    width: 4px;
+    height: 6px;
+  }
+ .scroll-container::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10px;
+  }
+  .scroll-container::-webkit-scrollbar-thumb:horizontal {
+    background-color: yellow;
+    border-radius: 5px;
+  }
+  .head-text{
+    font-size: 10px;
+  }
+  .head-text2{
+    font-size: 1.7rem;
+  }
+@media screen and (max-width:1000px) {
+    .scroll-container{
+        overflow-y: scroll;
+    }
+    .movie-title{
+       flex-direction: column;
+       text-align: center;
+       padding-bottom: 1rem;
+    }
+    .head-text2{
+      font-size: 1rem;
+    }
+}
+
+/* ------------------ div 3 --------------------- */
+.bgcon3 {
+    background-color: rgb(39, 42, 48);
+    /* height: 100vh; */
+  }
+  .bg-contain4{
+    background-image: url(./images/top-rated-bg.jpg);
+  }
+  .bg-contain5{
+    background-image: url(./images/tv-series-bg.jpg);
+  }
+  .bg-contain7{
+    background-image: url(./images/footer-bg.jpg);
+  }
+  .icon-desk {
+    border: 1px dashed yellow;
+    padding: 1.5rem;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.3s ease;
+
+  }
+  .icon-desk:hover{
+    background-color: yellow;
+    color: red;
+  }
+  .icon-contain{
+    color: white;
+  }
+  .contain-100{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .service-title{
+    color: #ffff00;
+    font-size: 12px;
+  }
+  .service-title::after{
+    content: '';
+    width: 2rem;
+    height: 2px;
+    background-color: yellow;
+    display: block;
+    margin-right: 1rem;
+    margin-top: 4px;
+  }
+  .service-big{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .service-con{
+    font-size: 13px;
+  }
+  .banner{
+    width: 90%;
+  }
+  @media screen and (max-width:990px) {
+    .service-big{
+        font-size: 1.2rem;
+    }
+    .service-con{
+        font-size: 10px;
+    }
+  }
+  @media screen and (max-width:490px) {
+    .banner{
+        width:80%;
+    }
+    .fa-2x{
+        padding: 1rem;
+        font-size: 1em;
+    }
+  }
+  @media screen and (max-width:300px) {
+    .service-big{
+        font-size: .8rem;
+    }
+  }
+
+  /*-------- div 4 - -----------    */
+
+  .bg-contain3{
+    background-color: lightslategray;
+  }
+  .btn-body2{
+    border-radius: 4px;
+    background-color: rgb(39, 42, 48);
+    /* border: 1px solid black; */
+    color: white;
+    padding: .5rem 1rem;
+    font-weight: bold;
+    font-size: 12px;
+    border: none;
+    box-shadow: inset 0px 2px 2px black;
+  }
+
+  /* ---- */
+
+  .bg-contain6{
+    /* height: 15vh; */
+    background-image: url(./images/cta-bg.jpg);
+  }
+  .input-box{
+    font-size: 12px;
+    width: 20rem;
+    padding:  .8rem 1rem;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+  }
+  .email-con{
+    position: relative;
+  }
+  .input-btn{
+    color: yellow;
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    background-color: rgb(39, 42, 48);
+    padding: .6rem .8rem;
+    border: none;
+    border-radius: 4px;
+  }
+  .trial-h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .trial-h2{
+    font-size: 12px;
+  }
+
+  @media screen and (max-width:776px){
+    .email-total{
+      flex-direction: column;
+    }
+    .email-con{
+      margin-top: .5rem;
+    }
+  }
+
+
+  /* footer */
+
+  .footer-lists ul li a,
+  .footer-lists2 ul li a{
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    transition: all 0.3s ease;
+  }
+
+  .footer-lists ul li a:hover,
+  .footer-lists2 ul li a:hover{
+    color: yellow;
+  }
+ .line-shadow{
+  background-color: rgb(39, 42, 48);
+  width: 100%;
+  height: 4px;
+  box-shadow: inset 2px 2px 2px rgb(39, 42, 48);
+ }
+ .foo-icons i{
+  background-color:rgb(70, 70, 121);
+  border-radius: 50%;
+  padding: .7rem;
+  margin-left: .5rem;
+ }
+ @media screen and (max-width:776px){
+  .con-nest7{
+    flex-direction: column;
+  }
+  .footer-lists{
+    margin-top: 3rem;
+  }
+}
+@media screen and (max-widht:500px) {
+  .footer-lists ul{
+    justify-content: center;
+    padding-top: 1rem;
+  }
+  .footer-lists li{
+    padding-right: .5rem;
+  }
+}
+
+/* navbar---- */
+
+.navbar{
+  z-index: 100;
+  transition: all 0.3s ease-out;
+}
+.navbar-transparent{
+  background-color: hsl(207, 19%, 11%);
+  transition: all 0.3s ease-in;
+}
+@media (min-scroll-top: 50px) {
+  .navbar{
+    background-color: gray;
+  }
+}
+
+.card img:hover{
+  cursor: pointer;
+  opacity: 0.7;
+}
