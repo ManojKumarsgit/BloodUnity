@@ -229,7 +229,7 @@ for (let i = 0; i < n1.length; i++) {
 
     switch (result) {
       case 'F':
-        result = "FRIEND 👩🏼‍🤝‍🧑🏼"
+        result = "FRIEND 🤝"
         // btn.innerHTML = "FRIEND👯‍♂️"
         fqoute.innerHTML = "FRIENDS DON'T JUDGE, THEY LAUGH!😆"
         friend();
@@ -309,7 +309,7 @@ function marriage() {
 }
 
 function friend() {
-  mainpara.innerHTML = `IF YOU WANT TO FEEL WHAT THE ACTUAL <span class="side">FRIEND👩🏼‍🤝‍🧑🏼</span> IS`
+  mainpara.innerHTML = `IF YOU WANT TO FEEL WHAT THE ACTUAL <span class="side">FRIEND🤝</span> IS`
   let side = document.querySelector('.side').style = "color:red; font-style:italic;";
   movieName.textContent = 'PRIYAMAANA THOZHI (2003)'
   audio.src = `./audio/${friSongs[0]}.mp3`;
