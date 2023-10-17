@@ -1,12 +1,17 @@
 const names1 = document.querySelector('.name1')
-    const names2 = document.querySelector('.name2')
-    const btn = document.querySelector('.btn-chk')
-    const chkBtn = document.querySelector('.display')
-    const fqoute = document.querySelector('.fun-qoute')
-    const reset = document.querySelector('.reset');
-    const playBtn = document.querySelector('.play-btn')
-    const icon = document.querySelector('.tag')
-    const hide = document.querySelector('.hide')
+const names2 = document.querySelector('.name2')
+const btn = document.querySelector('.btn-chk')
+const chkBtn = document.querySelector('.display')
+const fqoute = document.querySelector('.fun-qoute')
+const reset = document.querySelector('.reset');
+const playBtn = document.querySelector('.play-btn')
+const icon = document.querySelector('.tag')
+const hide = document.querySelector('.hide')
+const playHeader2 = document.querySelector('.play-header2')
+const mainpara = document.querySelector('.main-para');
+const movieName = document.querySelector('.movie-name')
+const resImg = document.getElementById('resImage');
+
 
     let isError = false;
 
@@ -18,23 +23,71 @@ const names1 = document.querySelector('.name1')
       names1.value = ""
       names2.value = ""
       btn.innerHTML = "TEST"
-      fqoute.innerHTML = `<p class="fun-qoute"><q>FUN QOUTE</q></p>`
+      fqoute.textContent = `"FUN QOUTES"`
+      chkBtn.innerHTML =""
+      btn.style = "display:inline-block"
+      playHeader2.textContent = "Tap to Play"
+      resetTime();
     })
+    
+
     let isPlaying = false;
+    let lastPlayedTime = 0;
+    const audio = document.getElementById("myAudio");
+
+    function resetTime() {
+      audio.pause();
+      lastPlayedTime = 0;
+      icon.classList.remove('fa-pause-circle')
+      icon.classList.add('fa-play-circle')
+      playBtn.style = "background-color: greenyellow !important;"
+    }
+
+    let affSongs = ["Affect1"]
+    let loveSongs = ["love1","love2"]
+    let sisSongs = ["sister1","sister2"]
+    let marrSongs = ["marriage1","marriage2"]
+    let enemSongs = ["enemy"]
+    let friSongs = ["friend2"]
+
+    audio.src = affSongs[0];
     playBtn.addEventListener('click',() =>{
       if(!isPlaying){
         icon.classList.remove('fa-play-circle')
         icon.classList.add('fa-pause-circle')
+        audio.currentTime = lastPlayedTime;
+        audio.play();
+        playBtn.style = "background-color: red !important;"
         isPlaying = true;
       } else {
         icon.classList.remove('fa-pause-circle')
         icon.classList.add('fa-play-circle')
+        lastPlayedTime = audio.currentTime;
+        audio.pause();
+        console.log(lastPlayedTime);
+        playBtn.style = "background-color: greenyellow !important;"
         isPlaying = false;
       }
     })
-    btn.addEventListener('click',() =>{
-        
 
+    
+    
+
+  audio.addEventListener("ended",ended);
+
+  function ended() {
+    audio.pause();
+    icon.classList.remove('fa-pause-circle')
+    icon.classList.add('fa-play-circle')
+    isPlaying = false;
+    lastPlayedTime = 0;
+    playBtn.style = "background-color: red"
+    playHeader2.textContent = "PLAY AGAIN"
+  }
+
+
+
+    btn.addEventListener('click',() =>{
         let timeoutId;
         let n1 = String(names1.value).trim().replace(/\s+/g, "").toUpperCase();
         let n2 = String(names2.value).trim().replace(/\s+/g, "").toUpperCase();
@@ -176,40 +229,106 @@ for (let i = 0; i < n1.length; i++) {
 
     switch (result) {
       case 'F':
-        // result = "Friend 👯‍♂️"
-        btn.innerHTML = "FRIEND👯‍♂️"
+        result = "FRIEND 👯‍♂️"
+        // btn.innerHTML = "FRIEND👯‍♂️"
         fqoute.innerHTML = "NOWADAYS LOT OF FRIEND MARRIAGES HAPPENED😆"
+        friend();
         break;
       case 'L':
-        // result = "Love ❤"
-        btn.innerHTML = "LOVE❤"
+        result = "LOVE ❤"
+        // btn.innerHTML = "LOVE❤"
         fqoute.innerHTML = "YOU GOT LOVE, BUT MARRIAGE IS DOUBT😂🤣"
+        love();
         break;
       case 'A':
-        btn.innerHTML = "AFFECTION😢"
-        // result = "AFFECTION"
-        fqoute.innerHTML = "IT'S ALL FACT, I KNOW IT HURTS😶"
+        // btn.innerHTML = "AFFECTION"
+        result = "AFFECTION 💔"
+        fqoute.innerHTML = "ONE-SIDED LOVE IS LIKE A SELFIE WITH NO LIKES😶"
+        affection();
         break;
       case 'M':
-        btn.innerHTML = "MARRIAGE💑😍"
-        // result = "MARRIAGE"
-        fqoute.innerHTML = "YOU GOT MARRIAGE, BUT WHERE IS LOVE🤔"
+        // btn.innerHTML = "MARRIAGE💑😍"
+        result = "MARRIAGE 💑"
+        fqoute.innerHTML = "YOU GOT MARRIAGE, BUT WHERE IS LOVE😆🤔"
+        marriage();
         break; 
       case 'E':
-        btn.innerHTML = "ENEMY🤬"
-        // result = "ENEMY"
-        fqoute.innerHTML = "LET'S FIGHT TOGETHER 🤣"
+        // btn.innerHTML = "ENEMY🤬"
+        result = "ENEMY 🤬"
+        fqoute.innerHTML = "HEY ENEMY, WE'RE LIKE TOMATOES AND KETCHUP😆"
+        enemy();
         break;
       case 'S':
-        btn.innerHTML = "SISTER👩‍👦"
-        // result = "SISTER"
+        // btn.innerHTML = "SISTER👩‍👦"
+        result = "SISTER 👩‍👦"
         fqoute.innerHTML = "AHH! IT's HARD TO THINK LIKE SISTER😆"
+        sister()
         break;                 
       default:
         break;
 
       
     }
-
-    // chkBtn.innerHTML = result;
+    chkBtn.innerHTML = result;
+    btn.style = "display:none;";
+      
 })
+
+
+let random = 0;
+function affection() {
+  mainpara.innerHTML = `IT'S LIKE A <span class="side">ONE SIDE LOVE💔</span>, IF YOU WANT TO FEEL THAT`
+  let side = document.querySelector('.side').style = "color:red; font-style:italic;";
+  movieName.textContent = 'POOVE UNAKKAGA (1996)'
+  audio.src = `./audio/${affSongs[0]}.mp3`;
+  resImg.src = "./images/affect1.jpg"
+  
+}
+function love() {
+  mainpara.innerHTML = `IF YOU WANT TO FEEL WHAT THE ACTUAL <span class="side">LOVE❤</span> IS`
+  let side = document.querySelector('.side').style = "color:red; font-style:italic;";
+  movieName.textContent = 'SITA RAMAM (2022)'
+  audio.src = `./audio/${loveSongs[randomNum()]}.mp3`;
+  resImg.src = "./images/love1.jpg"
+}
+
+function sister() {
+  mainpara.innerHTML = `IF YOU WANT TO FEEL WHAT THE ACTUAL <span class="side">SISTER LOVE❤</span> IS`
+  let side = document.querySelector('.side').style = "color:red; font-style:italic;";
+  movieName.textContent = 'SIVAPPU MANJAL PACHAI (2019)'
+  audio.src = `./audio/${sisSongs[randomNum()]}.mp3`;
+  resImg.src = "./images/sister.jpg"
+}
+
+function marriage() {
+  mainpara.innerHTML = `IF YOU WANT TO FEEL WHAT THE ACTUAL <span class="side">MARRIAGE💑</span> IS`
+  let side = document.querySelector('.side').style = "color:red; font-style:italic;";
+  movieName.textContent = 'SILLUNU ORU KAADHAL (2006)'
+  audio.src = `./audio/${marrSongs[randomNum()]}.mp3`;
+  resImg.src = "./images/marriage.jpg"
+}
+
+function friend() {
+  mainpara.innerHTML = `IF YOU WANT TO FEEL WHAT THE ACTUAL <span class="side">FRIEND👯‍♂️</span> IS`
+  let side = document.querySelector('.side').style = "color:red; font-style:italic;";
+  movieName.textContent = 'PRIYAMAANA THOZHI (2003)'
+  audio.src = `./audio/${friSongs[0]}.mp3`;
+  resImg.src = "./images/friend.jpg"
+}
+
+function enemy() {
+  mainpara.innerHTML = `IF YOU WANT TO KNOW WHAT THE <span class="side">ENEMY😡</span> IS`
+  let side = document.querySelector('.side').style = "color:red; font-style:italic;";
+  movieName.textContent = 'KODI (2016)'
+  audio.src = `./audio/${enemSongs[0]}.mp3`;
+  resImg.src = "./images/enemy1.jpg"
+}
+function randomNum() {
+  random = Math.floor(Math.random() * 2);
+  return random;
+}
+// console.log(randomNum());
+
+
+ 
+
