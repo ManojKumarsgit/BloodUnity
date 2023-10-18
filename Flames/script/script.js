@@ -284,21 +284,21 @@ let sisterMov = ["Sivappu Manjal Pachai (2019)","Thirupaachi (2005)","Namma Veet
 let random = 0;
 function friend() {
   mainpara.innerHTML = `IF YOU WANT TO FEEL WHAT THE ACTUAL <span class="side">FRIEND🤝</span> IS`
-  let side = document.querySelector('.side').style = "color:red; font-style:italic;";
+  let side = document.querySelector('.side').style = "color:red;";
   movieName.textContent = friendMov[randomNumMov()];
   audio.src = `./audio/${friSongs[0]}.mp3`;
   resImg.src = "./images/friend.jpg"
 }
 function love() {
   mainpara.innerHTML = `IF YOU WANT TO FEEL WHAT THE ACTUAL <span class="side">LOVE❤</span> IS`
-  let side = document.querySelector('.side').style = "color:red; font-style:italic;";
+  let side = document.querySelector('.side').style = "color:red;";
   movieName.textContent = loveMov[randomNumMov()];
   audio.src = `./audio/${loveSongs[randomNum()]}.mp3`;
   resImg.src = "./images/love1.jpg"
 }
 function affection() {
   mainpara.innerHTML = `IT'S LIKE A <span class="side">ONE SIDE LOVE💔</span>, IF YOU WANT TO FEEL THAT`
-  let side = document.querySelector('.side').style = "color:red; font-style:italic;";
+  let side = document.querySelector('.side').style = "color:red;";
   movieName.textContent = affectMov[randomNumMov()];
   audio.src = `./audio/${affSongs[0]}.mp3`;
   resImg.src = "./images/affect1.jpg"
@@ -306,21 +306,21 @@ function affection() {
 }
 function marriage() {
   mainpara.innerHTML = `IF YOU WANT TO FEEL WHAT THE ACTUAL <span class="side">MARRIAGE💑</span> IS`
-  let side = document.querySelector('.side').style = "color:red; font-style:italic;";
+  let side = document.querySelector('.side').style = "color:red;";
   movieName.textContent = marriageMov[randomNumMov()];
   audio.src = `./audio/${marrSongs[randomNum()]}.mp3`;
   resImg.src = "./images/marriage.jpg"
 }
 function enemy() {
   mainpara.innerHTML = `IF YOU WANT TO KNOW WHAT THE <span class="side">ENEMY😡</span> IS`
-  let side = document.querySelector('.side').style = "color:red; font-style:italic;";
+  let side = document.querySelector('.side').style = "color:red;";
   movieName.textContent = enemyMov[randomNumMov()];
   audio.src = `./audio/${enemSongs[0]}.mp3`;
   resImg.src = "./images/enemy1.jpg"
 }
 function sister() {
   mainpara.innerHTML = `IF YOU WANT TO FEEL WHAT THE ACTUAL <span class="side">SISTER LOVE❤</span> IS`
-  let side = document.querySelector('.side').style = "color:red; font-style:italic;";
+  let side = document.querySelector('.side').style = "color:red;";
   movieName.textContent = sisterMov[randomNumMov()];
   audio.src = `./audio/${sisSongs[randomNum()]}.mp3`;
   resImg.src = "./images/sister.jpg"
