@@ -253,8 +253,8 @@ for (let i = 0; i < n1.length; i++) {
         marriage();
         break; 
       case 'E':
-        // btn.innerHTML = "ENEMY🤬"
-        result = "ENEMY 🤬"
+        // btn.innerHTML = "ENEMY"
+        result = "ENEMY😡"
         fqoute.innerHTML = "HEY ENEMY, WE'RE LIKE TOMATOES AND KETCHUP😆"
         enemy();
         break;
@@ -274,61 +274,66 @@ for (let i = 0; i < n1.length; i++) {
       
 })
 
+let friendMov = ["Hey! Sinamika (2022)","Thiruchitrambalam (2022)","Bangalore Days (2014)","Oru Adaar Love (2019)","Priyamaana Thozhi (2003)"];
+let loveMov = ["Sita Ramam (2022)","Madrasapattinam (2010)","Thulladha Manamum Thullum (1999)","Sachein (2005)","Raja Rani (2013)"];
+let affectMov = ["Poove Unakkaga (1996)","Shahjahan (2001)" ,"Raangi (2001)","David (2013)","Mounam Pesiyadhe (2002)"];
+let marriageMov = ["Sillunu Oru Kaadhal (2006)","Thaandavam (2012)","Raja Rani (2013)","Priyamanavale (2000)","Vaaranam Aayiram (2008)"];
+let enemyMov = ["Kodi (2016)","Devathaiyai Kanden (2005)","Thimiru (2006)","Vallavan (2006)","Padayappa (1999)"];
+let sisterMov = ["Sivappu Manjal Pachai (2019)","Thirupaachi (2005)","Namma Veettu Pillai (2019)","Velayudham (2011)","Vedi (2011)"];
 
 let random = 0;
-function affection() {
-  mainpara.innerHTML = `IT'S LIKE A <span class="side">ONE SIDE LOVE💔</span>, IF YOU WANT TO FEEL THAT`
+function friend() {
+  mainpara.innerHTML = `IF YOU WANT TO FEEL WHAT THE ACTUAL <span class="side">FRIEND🤝</span> IS`
   let side = document.querySelector('.side').style = "color:red; font-style:italic;";
-  movieName.textContent = 'POOVE UNAKKAGA (1996)'
-  audio.src = `./audio/${affSongs[0]}.mp3`;
-  resImg.src = "./images/affect1.jpg"
-  
+  movieName.textContent = friendMov[randomNumMov()];
+  audio.src = `./audio/${friSongs[0]}.mp3`;
+  resImg.src = "./images/friend.jpg"
 }
 function love() {
   mainpara.innerHTML = `IF YOU WANT TO FEEL WHAT THE ACTUAL <span class="side">LOVE❤</span> IS`
   let side = document.querySelector('.side').style = "color:red; font-style:italic;";
-  movieName.textContent = 'SITA RAMAM (2022)'
+  movieName.textContent = loveMov[randomNumMov()];
   audio.src = `./audio/${loveSongs[randomNum()]}.mp3`;
   resImg.src = "./images/love1.jpg"
 }
-
+function affection() {
+  mainpara.innerHTML = `IT'S LIKE A <span class="side">ONE SIDE LOVE💔</span>, IF YOU WANT TO FEEL THAT`
+  let side = document.querySelector('.side').style = "color:red; font-style:italic;";
+  movieName.textContent = affectMov[randomNumMov()];
+  audio.src = `./audio/${affSongs[0]}.mp3`;
+  resImg.src = "./images/affect1.jpg"
+  
+}
+function marriage() {
+  mainpara.innerHTML = `IF YOU WANT TO FEEL WHAT THE ACTUAL <span class="side">MARRIAGE💑</span> IS`
+  let side = document.querySelector('.side').style = "color:red; font-style:italic;";
+  movieName.textContent = marriageMov[randomNumMov()];
+  audio.src = `./audio/${marrSongs[randomNum()]}.mp3`;
+  resImg.src = "./images/marriage.jpg"
+}
+function enemy() {
+  mainpara.innerHTML = `IF YOU WANT TO KNOW WHAT THE <span class="side">ENEMY😡</span> IS`
+  let side = document.querySelector('.side').style = "color:red; font-style:italic;";
+  movieName.textContent = enemyMov[randomNumMov()];
+  audio.src = `./audio/${enemSongs[0]}.mp3`;
+  resImg.src = "./images/enemy1.jpg"
+}
 function sister() {
   mainpara.innerHTML = `IF YOU WANT TO FEEL WHAT THE ACTUAL <span class="side">SISTER LOVE❤</span> IS`
   let side = document.querySelector('.side').style = "color:red; font-style:italic;";
-  movieName.textContent = 'SIVAPPU MANJAL PACHAI (2019)'
+  movieName.textContent = sisterMov[randomNumMov()];
   audio.src = `./audio/${sisSongs[randomNum()]}.mp3`;
   resImg.src = "./images/sister.jpg"
 }
 
-function marriage() {
-  mainpara.innerHTML = `IF YOU WANT TO FEEL WHAT THE ACTUAL <span class="side">MARRIAGE💑</span> IS`
-  let side = document.querySelector('.side').style = "color:red; font-style:italic;";
-  movieName.textContent = 'SILLUNU ORU KAADHAL (2006)'
-  audio.src = `./audio/${marrSongs[randomNum()]}.mp3`;
-  resImg.src = "./images/marriage.jpg"
-}
 
-function friend() {
-  mainpara.innerHTML = `IF YOU WANT TO FEEL WHAT THE ACTUAL <span class="side">FRIEND🤝</span> IS`
-  let side = document.querySelector('.side').style = "color:red; font-style:italic;";
-  movieName.textContent = 'PRIYAMAANA THOZHI (2003)'
-  audio.src = `./audio/${friSongs[0]}.mp3`;
-  resImg.src = "./images/friend.jpg"
-}
 
-function enemy() {
-  mainpara.innerHTML = `IF YOU WANT TO KNOW WHAT THE <span class="side">ENEMY😡</span> IS`
-  let side = document.querySelector('.side').style = "color:red; font-style:italic;";
-  movieName.textContent = 'KODI (2016)'
-  audio.src = `./audio/${enemSongs[0]}.mp3`;
-  resImg.src = "./images/enemy1.jpg"
-}
 function randomNum() {
   random = Math.floor(Math.random() * 2);
   return random;
 }
-// console.log(randomNum());
 
-
- 
-
+function randomNumMov() {
+  random = Math.floor(Math.random() * 5);
+  return random;
+} 
