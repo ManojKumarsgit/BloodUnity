@@ -12,6 +12,7 @@ const mainpara = document.querySelector('.main-para');
 const movieName = document.querySelector('.movie-name')
 const resImg = document.getElementById('resImage');
 
+alert("hello from git");
 
     let isError = false;
 
