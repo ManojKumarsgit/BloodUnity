@@ -354,21 +354,21 @@ function friend() {
   let side = document.querySelector('.side').style = "color:red;";
   movieName.textContent = friendMov[randomNum()];
   audio.src = `./audio/Friend/${friSongs[randomNumSongs()]}.mp3`;
-  resImg.src = `./images/Friend/${friendImages[randomNum()]}.jpg`
+  resImg.src = `./images/Friend/${friendImages[randomNumImages()]}.jpg`
 }
 function love() {
   mainpara.innerHTML = `IF YOU WANT TO FEEL WHAT THE ACTUAL <span class="side">LOVE❤</span> IS`
   let side = document.querySelector('.side').style = "color:red;";
   movieName.textContent = loveMov[randomNum()];
   audio.src = `./audio/Love/${loveSongs[randomNumSongs()]}.mp3`;
-  resImg.src = `./images/Love/${loveImages[randomNum()]}.jpg`
+  resImg.src = `./images/Love/${loveImages[randomNumImages()]}.jpg`
 }
 function affection() {
   mainpara.innerHTML = `IT'S LIKE A <span class="side">ONE SIDE LOVE💔</span>, IF YOU WANT TO FEEL THAT`
   let side = document.querySelector('.side').style = "color:red;";
   movieName.textContent = affectMov[randomNum()];
   audio.src = `./audio/Affection/${affSongs[randomNumSongs()]}.mp3`;
-  resImg.src = `./images/Affection/${affectImages[randomNum()]}.jpg`
+  resImg.src = `./images/Affection/${affectImages[randomNumImages()]}.jpg`
   
 }
 function marriage() {
@@ -376,29 +376,34 @@ function marriage() {
   let side = document.querySelector('.side').style = "color:red;";
   movieName.textContent = marriageMov[randomNum()];
   audio.src = `./audio/Marriage/${marrSongs[randomNumSongs()]}.mp3`;
-  resImg.src = `./images/Marriage/${marriageImages[randomNum()]}.jpg`
+  resImg.src = `./images/Marriage/${marriageImages[randomNumImages()]}.jpg`
 }
 function enemy() {
   mainpara.innerHTML = `IF YOU WANT TO KNOW WHAT THE <span class="side">ENEMY😡</span> IS`
   let side = document.querySelector('.side').style = "color:red;";
   movieName.textContent = enemyMov[randomNum()];
   audio.src = `./audio/${enemSongs[0]}.mp3`;
-  resImg.src = `./images/Enemy/${enemyImages[randomNum()]}.jpg`
+  resImg.src = `./images/Enemy/${enemyImages[randomNumImages()]}.jpg`
 }
 function sister() {
   mainpara.innerHTML = `IF YOU WANT TO FEEL WHAT THE ACTUAL <span class="side">SISTER LOVE❤</span> IS`
   let side = document.querySelector('.side').style = "color:red;";
   movieName.textContent = sisterMov[randomNum()];
   audio.src = `./audio/Sister/${sisSongs[randomNumSongs()]}.mp3`;
-  resImg.src = `./images/Sister/${sisterImages[randomNum()]}.jpg`
+  resImg.src = `./images/Sister/${sisterImages[randomNumImages()]}.jpg`
 }
 
 function randomNum() {
   random = Math.floor(Math.random() * 5);
   return random;
 }
-console.log(randomNum());
+
 function randomNumSongs() {
+  random = Math.floor(Math.random() * 5);
+  return random;
+}
+
+function randomNumImages() {
   random = Math.floor(Math.random() * 5);
   return random;
 }
