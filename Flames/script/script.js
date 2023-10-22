@@ -296,7 +296,7 @@ let sisterImages = ["sister1","sister2","sister3","sister4","sister5"];
 
 // qoutes
 let friendQoute = [
-    "Friends don't Judge, They Laugh!",
+    "Nowadays lot of Friend come Marriage Happened 😆",
     "A Friend is Someone Who Knows you and Loves you just the same",
     "Friendship is the only cement that will ever hold the world together",
     "Friendship is like a wine, it gets better with age",
