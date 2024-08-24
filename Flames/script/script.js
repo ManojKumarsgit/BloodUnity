@@ -12,7 +12,7 @@ const mainpara = document.querySelector('.main-para');
 const movieName = document.querySelector('.movie-name')
 const resImg = document.getElementById('resImage');
 
-    alert(`Please.. Adjust your Phone Volume Based on your Environment!. "AutoPlay" audio is enabled in this site. You can Pause it under the Image`);
+    alert(`Please.. Adjust your Device Volume Based on your Environment!. "AutoPlay" audio is enabled in this site. You can Pause it under the Image`);
 
 
     let isError = false;
@@ -142,7 +142,7 @@ for (let i = 0; i < n1.length; i++) {
     isError = true;
 
 
-    // ALORITHM BEGINS
+    // ALGORITHM BEGINS
 
     class CLL {
   constructor() {
